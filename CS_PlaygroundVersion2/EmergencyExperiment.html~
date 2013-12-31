@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<style> 
+header, section, nav, aside, article, figure, figcaption, section, footer, ol, p, h1, h2, h3, h4 
+{
+    display: list-item 
+    margin: 2px; 
+    padding: 2px;
+}
+
+ul 
+{
+    padding-left: 24px;
+}
+
+</style>
+
+<head>
+
+    <script type="text/javascript">
+    <!--
+    function getValue()
+    {
+        var retVal = prompt("Enter your name : ")
+        if (retVal == "")
+        {
+            alert("You didn't enter your name! ;)")
+        }
+        else
+        {
+            alert("Hi " +  retVal + ", how's it going?" )
+        }
+    }
+    //-->
+
+    </script>
+
+    <title>My first web page - Playground of Web Page Design</title>
+</head>
+
+<body>
+    <h1>My Playground of Web Page Design</h1>
+
+    <script language="javascript" type="text/javascript">
+    <!--
+       document.write("Hello World! This is by via Javascript!")
+    //-->
+    </script>
+
+    <form>
+    <input type="button" value="Some interaction - Click Me!" onclick="getValue();" />
+    </form>
+
+    <noscript>
+      Sorry...JavaScript is needed to go ahead.
+    </noscript>
+
+    <p> 
+    Want to Print? Press the print button
+    <input type="button" value="Print" onclick="window.print()" />
+    </p>
+
+    <h2>
+    What this is
+    </h2>
+    <p>A simple page put together using HTML</p>
+
+    <!Describe purpose of webpage and also try out some lists>
+    <h2>Why this is</h2>
+    <ul>
+        <li>To learn HTML</li>
+        <li>To show off</li>
+        <li>To do cool things in HTML</li>
+        <ol>
+            <li> some cool things is maybe add a few widgets </li>
+            <li> maybe some games or renderings </li>
+            <li> maybe some animations </li>
+            <li> maybe some decorative front end stuff </li>
+        </ol>
+    </ul>
+
+    <! Describe who I am and try out a table>
+    <h2>Who I am</h2>
+    <p><img src="https://scontent-a.xx.fbcdn.net/hphotos-prn1/18983_493934397331683_1304748081_n.jpg" 
+            width = "112" height = "75" alt = "Me"> </p>
+    <p> I'm Naoki and am an undergrad Computer Science Major at Caltech. I love playing and watching basketball. </p>
+    <p> Classes I am currently taking </p>
+    <ul>
+        <li> CS 156 (Machine Learning </li>
+        <li> CS 171 (Computer Graphics, including OpenGL) </li>
+    </ul>
+
+    <h2>Upcoming NBA schedule for Dec 2nd - Dec 4th</h2>
+    <table border="1" cellspacing="3">
+        <tr>
+            <td>December 2nd</td>
+            <td>December 3rd</td>
+            <td>December 4th</td>
+        </tr>
+        <tr>
+            <td>Magic at Pelicans</td>
+            <td>Magic at Bucks</td>
+            <td>Nuggets at Clippers</td>
+        </tr>
+        <tr>
+            <td>Wizards at Bulls</td>
+            <td>76ers at Celtics</td>
+            <td>Cavaliers at Hawks</td>
+        </tr>
+        <tr>
+            <td>Hawks at Rockets</td>
+            <td>Pistons at Nuggets</td>
+            <td>Mavericks at Pistons</td>
+        </tr>
+        <tr>
+            <td>Spurs at Jazz</td>
+            <td>Heat at Nets</td>
+            <td>Pelicans at Bucks</td>
+        </tr>
+    </table>
+
+
+    <h2> A question for the user </h2>
+    <p><i>Are you happy?</i> yes <input type="checkbox"> no <input type="checkbox">
+                      I prefer not to answer <input type="checkbox"></p>
+    <p>Which sport do you like the most? basketball <input type="radio"> american football <input type="radio">
+                                        I don't like sports <input type="radio"> other <input type="radio"></p>
+
+    <h2>My github page</h2>
+    <p><a href="https://github.com/ThinkFlow">My Github Account</a></p>
+
+    <input type="text"> 
+    <form action="userlog.txt" method="post">
+
+    </form>
+</body>
+
+</html>
