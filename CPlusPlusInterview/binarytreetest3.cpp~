@@ -1,0 +1,11 @@
+struct binarytreenode
+{
+    int val;
+    binarytreenode* left;
+    binarytreenode* right;
+};
+
+int depth(binarytreenode* parentnode)
+{
+    
+}

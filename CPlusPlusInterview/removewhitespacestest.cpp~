@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+void removewhitespaces(char* string);
+
+int main()
+{
+    char str[30] = "My name is jim";
+
+    removewhitespaces(str);
+
+    cout << "The new string is: " << str << endl;
+
+    return 0;
+}
+
+void removewhitespaces(char* string)
+{
+    if (string == NULL)
+    {
+        return;
+    }
+
+    char* copy_to = string;
+
+    char* copy_from = string;
+
+    
+}

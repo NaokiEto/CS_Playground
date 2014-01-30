@@ -1,0 +1,16 @@
+struct binarytreenode
+{
+    int val;
+    binarytreenode *rightnode;
+    binarytreenode *leftnode;
+};
+
+int depth(binarytreenode* parentnode)
+{
+    if (parentnode == NULL)
+    {
+        return 0;
+    }
+
+    
+}

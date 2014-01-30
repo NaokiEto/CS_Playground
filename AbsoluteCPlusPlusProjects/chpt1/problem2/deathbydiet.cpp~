@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    const double percentdietsoda = 0.001;
+
+    double mouse, human, artificialsweetener;
+
+    int numofdietsoda;
+
+    cout << "Please enter the amount of artificial sweetener needed to kill a mouse as a decimal \
+in relation to 100 grams: " << endl;
+
+    cin >> artificialsweetener;
+
+    cout << "Please enter the weight of the mouse (in pounds): " << endl;
+
+    cin >> mouse;
+
+    cout << "Please enter your targeted diet weight (in pounds): " << endl;
+
+    cin >> human;
+
+    numofdietsoda = floor(human/mouse * artificialsweetener/percentdietsoda);
+
+    cout << "The number of diet sodas that is safe to drink is: " << numofdietsoda << endl;
+
+    return 0;
+}
