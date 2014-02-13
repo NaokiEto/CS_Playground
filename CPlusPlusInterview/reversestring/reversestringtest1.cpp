@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+string reverse(string word);
+
+int main()
+{
+    string str;
+
+    cout << "Please input a string: " << endl;
+    
+    getline(cin, str);
+
+    str = reverse(str);
+
+    cout << "The new reversed string is: " << str << endl;
+
+    return 0;
+}
+
+string reverse(string word)
+{
+    string newstring = "";
+
+    for (int i = 0; i < word.length(); i++)
+    {
+        newstring = word[i] + newstring;
+    }
+    return newstring;
+}

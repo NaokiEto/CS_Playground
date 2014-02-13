@@ -6,7 +6,9 @@ string reverse(string s);
 
 int main()
 {
-    string str = "howdy";
+    cout << "Input a string" << endl;
+    string str;
+    getline(cin, str);
     str = reverse(str);
 
     cout << "the reversed string is: " << str << endl;

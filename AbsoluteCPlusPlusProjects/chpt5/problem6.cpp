@@ -7,14 +7,23 @@
 
 using namespace std;
 
+// number of rows and columns in the game
 const int NUMROWS = 3;
 
 const int NUMCOLS = 3;
 
+// function to display the game on the console
 void display(const char arr[][NUMCOLS]);
 
+// function to implement where the players wants to mark
+// in the game
 void play(char arr[][NUMCOLS], int position, int player);
 
+// function to determine if that position has already been played
+// returns true if the position has already been played
+bool distinctposition(const char [][NUMCOLS], int position);
+
+// determines if there is a winner by adding up the rows/columns/diagonals
 bool gamesum(const char arr[][NUMCOLS]);
 
 int main()
@@ -40,10 +49,16 @@ int main()
 
         cin >> pos;
 
-        play(tictac, pos, playernum);
+        while (distinctposition(tictac, pos))
+        {
+            cout << "Position already entered before! Please enter a new position, player 1" << endl;
+            cin >> pos;
+        }
 
+        play(tictac, pos, playernum);
         display(tictac);
 
+        // switch players
         playernum = 1 - playernum;
     }
 
@@ -61,6 +76,22 @@ void display(const char arr[][NUMCOLS])
         // create a new line to add the next row of tictactoe
         cout << endl;
     }
+}
+
+bool distinctposition(const char arr[][NUMCOLS], int position)
+{
+    // determine the row that the position is in
+    int row = (position - 1)/3;
+
+    // determine the column that is the position is in
+    int col = (position - 1) % 3;
+
+    if (arr[row][col] == 'O' || arr[row][col] == 'X')
+    {
+        return true;
+    }
+
+    return false;
 }
 
 void play(char arr[][NUMCOLS], int position, int player)
@@ -139,7 +170,7 @@ bool gamesum(const char arr[][NUMCOLS])
 
     for (int k = 0 ; k < 2; k++)
     {
-        if (diagsum[k] == 3*'0')
+        if (diagsum[k] == 3*'O')
         {
             cout << "Player 2 (O's) wins!" << endl;
             return false;
